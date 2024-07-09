@@ -69,8 +69,9 @@ I took the following steps:
 **Task:** You have worked on multiple files and want to add them and commit using a single command.
 
 **Steps:**
-1. Add all files to the staging area and commit them with a single command.
-2. Verify the commit by checking the commit log.
+1. Created 3 python code files.
+2. Programmed basic code for Addition, Subtraction and Multiplication of 2 numbers.
+3. 
 
 ### Scenario 3: Include Additional Commit in the Previous Commit Message
 **Task:** You have just made a commit but realize you forgot to include a file and make a small typo correction. Instead of creating a new commit, you can amend the last commit to include these changes without altering the commit message. Also verify the amended commit by checking the commit log.
