@@ -70,8 +70,17 @@ I took the following steps:
 
 **Steps:**
 1. Created 3 python code files.
-2. Programmed basic code for Addition, Subtraction and Multiplication of 2 numbers.
-3. 
+2. Created Python files for Addition, Subtraction and Multiplication of 2 numbers.
+3. Adding the Files for tracking
+```
+git commit "Added python files for TASK - 2"
+```
+4. Further modifying multiple files to implement the code logic.
+5. Added for staging and Committed the changes using a single command :
+```
+git commit -am "Modified Python files for Addition, Subtraction and Multiplication"
+```
+![](/TASK%20-%202/Files.png)
 
 ### Scenario 3: Include Additional Commit in the Previous Commit Message
 **Task:** You have just made a commit but realize you forgot to include a file and make a small typo correction. Instead of creating a new commit, you can amend the last commit to include these changes without altering the commit message. Also verify the amended commit by checking the commit log.
