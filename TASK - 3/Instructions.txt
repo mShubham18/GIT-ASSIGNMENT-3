@@ -1,0 +1,18 @@
+//Instructions to Create a Python Program for Fibonacci Seri.
+
+The Fibonacci series is a sequence of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The sequence starts like this: 0, 1, 1, 2, 3, 5, 8, 13, ...
+
+Here’s how you can create a Python program to generate the Fibonacci series:
+
+Initialize the First Two Numbers:
+
+Start with the first two numbers of the Fibonacci series, a = 0 and b =1.
+Decide the Length of the Series:
+
+Define a variable to indicate how many numbers of the series you want to generate, for example, n = 10.
+Use a Loop to Generate the Series:
+
+Use a loop to calculate the next numbers in the series. In each iteration, the next number is the sum of the last two numbers.
+Print or Store the Numbers:
+
+Print the numbers or store them in a list to use later.
