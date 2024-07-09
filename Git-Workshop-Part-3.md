@@ -9,15 +9,54 @@ Complete the following tasks using Git. Document each step with a screenshot in 
 **Task:** Imagine you and your teammate are working on the same file, `project.txt`. Both of you make changes to the same lines and commit them. Let’s say your teammate’s changes are merged first. And now when you try to merge your changes, a merge conflict occurs.
 
 **Expected result:** 
-Changes from both branches should be included in the file in the main branch. The changes should be included in the sequence: first your teammate’s changes and then the changes made by you.
+```
+mkdir "TASK - 1"
+git branch user1
+git branch user2
+cd "TASK-1"
 
-**Steps to create a conflict:**
-1. Create a repository and add a file named `project.txt`.
-2. Create two branches in the repository.
-3. Make changes to the same line and in the same file in both branches.
-4. Commit the changes in both branches.
-5. Merge one branch into the main first and then try to merge the second branch.
-6. Understand the message that appears when you try to merge the second branch and explain that message. In case of conflicts explain the steps taken to resolve the conflict.
+//My changes as user1
+touch project.txt
+git checkout user1
+echo "This is the content by user 1" > project.txt
+git add . && commit -m "Created project.txt and added some content to it."
+
+//My FRIEND's changes as user2
+
+touch project.txt
+git checkout user2
+echo "This is the content by user 2" > project.txt
+git add . && commit -m "Created project.txt and added some content to it."
+
+git checkout master
+
+//Merging my branch to main
+
+git merge user1
+
+//**no conflict yet**
+
+//Merging FRIEND's conflicts to main
+git merge user2
+
+**conflict occured
+```
+![](/TASK%20-%201/merge-conflict.png)
+
+***Apparently, To solve the issue occured here, we need to review the user2 changes. If nothing collides with user1 changes, we have to mark this as resolved by staging and committing the changes.***
+
+```
+git add .
+git commit -m "accepted the merge changes from user 2"
+
+```
+***And therefore the file's content now is :***
+
+![](/TASK%20-%201/project.txt%20snapshot.png)
+
+
+
+1. Understand the message that appears when you try to merge the second branch and explain that message. In case of conflicts explain the steps taken to resolve the conflict.
 
 ### Scenario 2: Add Files and Commit Together
 **Task:** You have worked on multiple files and want to add them and commit using a single command.
