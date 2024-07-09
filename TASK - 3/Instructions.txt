@@ -1,4 +1,4 @@
-//Instructions to Create a Python Program for Fibonacci Seri.
+//Instructions to Create a Python Program for Fibonacci Series.
 
 The Fibonacci series is a sequence of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The sequence starts like this: 0, 1, 1, 2, 3, 5, 8, 13, ...
 
