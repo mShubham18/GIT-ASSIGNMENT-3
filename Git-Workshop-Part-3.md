@@ -86,10 +86,22 @@ git commit -am "Modified Python files for Addition, Subtraction and Multiplicati
 **Task:** You have just made a commit but realize you forgot to include a file and make a small typo correction. Instead of creating a new commit, you can amend the last commit to include these changes without altering the commit message. Also verify the amended commit by checking the commit log.
 
 **Steps:**
-1. Create and commit initial files.
-2. Make additional changes.
-3. Stage the changes and amend the last commit.
-4. Verify the amended commit by checking the commit log.
+1. Created Instructions.txt with instructions to create a python program for Fibonacci series.
+2. Programmed the Python file according to instructions.
+3. Added to tracking and Staging.
+4. Committed the changes.
+   ```
+   git commit -am "Added Instructions and Python program file for fibonacci series"
+   ```
+![](/TASK%20-%203/Initial%20commit.png)
+
+5. Typo error discovered at line 1 of Instruction file, resolved it
+6. Amended to existing commit
+```
+git add Instructions.txt
+git commit --amend
+```
+![](/TASK%20-%203/Final%20Commit.png)
 
 ### Scenario 4: Stash Command
 **Task:** You are working on a feature but need to quickly switch to another task without committing your current changes.
