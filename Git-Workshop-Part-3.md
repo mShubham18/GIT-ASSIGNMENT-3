@@ -54,9 +54,16 @@ git commit -m "accepted the merge changes from user 2"
 
 ![](/TASK%20-%201/project.txt%20snapshot.png)
 
+**Steps taken:**
 
+I took the following steps: 
 
-1. Understand the message that appears when you try to merge the second branch and explain that message. In case of conflicts explain the steps taken to resolve the conflict.
+1. Reviewed the conflict message thorougly to implement its resolution, i.e to merge the two changes from users.
+
+2. Checked if changes from user2 replaces changes from user1, if not proceed to next step
+
+3. Marked the conflict as resolved by adding the files to staging.
+4. Finally, committing the changes and confirming whether the changes have been made or not.
 
 ### Scenario 2: Add Files and Commit Together
 **Task:** You have worked on multiple files and want to add them and commit using a single command.
