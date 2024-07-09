@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 This is the content by user 1
+=======
+This is the content by user 2
+>>>>>>> user2
