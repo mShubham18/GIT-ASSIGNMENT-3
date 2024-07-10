@@ -213,11 +213,23 @@ Runtime data: *.pid, coverage/
 
 **Steps:**
 1. Adding a remote to this this repository
+   
    ```
    git remote
    git remote add origin https://github.com/mShubham18/GIT-ASSIGNMENT-3.git
    ```
-
+2. Creating `primenum.py` and adding program code to it. Also adding it for tracking and committing changes.
+   ```
+   touch primenum.py
+   //adding content manually through GUI
+   git add primenum.py
+   git commit -m "Added primenum.py"
+   ```
+3. Pushing the local repository `master` branch to remote repository
+   ```
+   git push origin master
+   ```
+4. Creating a `feature` branch and creating `factorial.py` 
 By completing these tasks, you'll gain hands-on experience with essential Git commands and concepts.
 
 ## Questions:
