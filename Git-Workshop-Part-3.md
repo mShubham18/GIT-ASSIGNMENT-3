@@ -195,7 +195,7 @@ Runtime data: *.pid, coverage/
    git commit -am "Update the initial code for pyramid.py"
    ```
    *Realised a mistake in the code, making it unable to execute*
-   
+
    ![](/TASK%20-%206/mistake%20commit.png)
 
 4. Reverting the most recent commit.
@@ -212,10 +212,11 @@ Runtime data: *.pid, coverage/
 **Task:** You have made changes on a feature branch and want to merge them into the main branch via a pull request.
 
 **Steps:**
-1. Create a new branch from the main branch and make changes.
-2. Push the branch to the remote repository.
-3. Create a pull request to merge your feature branch into the main branch.
-4. Describe the changes in the pull request.
+1. Adding a remote to this this repository
+   ```
+   git remote
+   git remote add origin https://github.com/mShubham18/GIT-ASSIGNMENT-3.git
+   ```
 
 By completing these tasks, you'll gain hands-on experience with essential Git commands and concepts.
 
