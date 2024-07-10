@@ -1,8 +1,5 @@
 # Git Workshop Assignment
 
-## Objective
-Complete the following tasks using Git. Document each step with a screenshot in the markdown file and provide the commands used along with a brief explanation. If you encounter commands that were not covered in the sessions, refer to the provided resources and include them in your documentation.
-
 ## Assignment: Git Commands and Concepts
 
 ### Scenario 1: Conflict Resolution
@@ -163,17 +160,17 @@ I took the following steps:
    *Hence, it is no longer being tracked*
 
 ``Explain real-life use cases of a ".gitignore". What type of files are included in it?``
-```
-A .gitignore file prevents unnecessary or sensitive files from being tracked in a Git repository. Typical files include:
+   ```
+   A .gitignore file prevents unnecessary or sensitive files from being tracked in a Git repository. Typical files include:
 
-Sensitive configuration: .env
-System-specific files: .DS_Store, Thumbs.db
-Build artifacts: dist/, *.class, *.o
-Dependencies: node_modules/, vendor/
-Logs: *.log
-Temporary files: *.tmp, *.swp
-IDE config: .vscode/, .idea/, *.iml
-Runtime data: *.pid, coverage/
+   - Sensitive configuration: .env
+   - System-specific files: .DS_Store, Thumbs.db
+   - Build artifacts: dist/, *.class, *.o
+   - Dependencies: node_modules/, vendor/
+   - Logs: *.log
+   - Temporary files: *.tmp, *.swp
+   - IDE config: .vscode/, .idea/, *.iml
+   - Runtime data: *.pid, coverage/
 ```
 
 ### Scenario 6: Revert to Previous Commits
@@ -257,15 +254,15 @@ Runtime data: *.pid, coverage/
 
 *Confirming merge*
 
-![](/TASK%20-%207/Confirming%20merge.png)
+   ![](/TASK%20-%207/Confirming%20merge.png)
 
 *Proceeding with merging*
 
-![](/TASK%20-%207/confirmed%20merge.png)
+   ![](/TASK%20-%207/confirmed%20merge.png)
 
 *Validating Merging of changes*
 
-![](/TASK%20-%207/Verifying%20merge.png)
+   ![](/TASK%20-%207/Verifying%20merge.png)
 
 By completing these tasks, you'll gain hands-on experience with essential Git commands and concepts.
 
@@ -274,19 +271,52 @@ By completing these tasks, you'll gain hands-on experience with essential Git co
 Please answer the following questions briefly by providing use cases.
 
 1. Why do we create branches in a repository and why do we create pull requests instead of merging directly?
+
+   ```
+   Branches: We create branches in Git repositories to work on features or fixes without affecting the main codebase. It isolates changes for review and testing.
+   
+   Pull Requests: Instead of merging directly, pull requests allow contributors to propose changes. They facilitate code review, feedback, and integration into the main branch with controlled merging.
+   ```
+
 2. What is the difference between `git add .` and `git add <filename>`? What will we use when we have changes in multiples but we are not required to add some files?
+   ```
+   git add .: Adds all changes in the current directory and subdirectories to the staging area.
+   
+   git add <filename>: Adds specific file changes to the staging area.
+   
+   Use case: When you have changes in multiple files but don't want to add all of them, use git add -p to selectively stage changes within files.
+   ```
 3. What is the difference between `git fetch` and `git pull`?
+   ```
+   git fetch only downloads changes; git pull also integrates them into your working branch.
+   ```
 4. What is a head in a repository and what does it do?
+   ```
+   Head: In Git, "HEAD" (uppercase) refers to the currently checked-out branch or commit. It points to the latest commit of the branch you are working on.
+   
+   Function: HEAD determines where your next commit will go and serves as a reference to the state of your working directory.
+   ```
+
 5. What is the `.git` folder in a repository?
+   ```
+   The .git directory is at the root of a Git repository and contains all the metadata and object database for the repository. It stores configuration settings, commit history, object references, etc.
+   ```
 6. What are commit hashes and its use cases?
+   ```
+   Commit hashes: Unique identifiers for commits in Git, generated based on the commit's content.
+   
+   Use cases: Identify specific commits for referencing in commands (git checkout <hash>), reverting changes, merging branches, and viewing commit history.
+   ```
 7. Different ways of syncing a branch with origin.
+   ```
+   3 ways :
 
-## Additional Learning Resources
-To further explore Git commands and concepts, such as creating and applying patches, you can refer to the following resources:
+   git push <remote> <branch>: Push local commits to the remote branch.
+   
+   git pull <remote> <branch>: Fetch changes from the remote branch and merge them into the current branch.
+   
+   git fetch <remote> followed by git rebase <remote>/<branch>: Fetch changes and reapply local commits on top.
 
-**Official Git Documentation:**
-- [Git Documentation](https://git-scm.com/docs) provides comprehensive guides and references for all Git commands and features.
+   ```
 
-**Creating and Applying Patches:**
-- [Git Tools - Patches from the Pro Git book](https://git-scm.com/book/en/v2/Git-Tools-Patchwork) explains how to create and apply patches in Git.
-- [Creating and Applying Patches tutorial from Atlassian](https://www.atlassian.com/git/tutorials/saving-changes/git-patch) offers step-by-step instructions.
+   *ps - previously this file was "Git-Workshop-Part-3.md"*
