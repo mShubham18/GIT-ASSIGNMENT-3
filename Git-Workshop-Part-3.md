@@ -8,26 +8,29 @@ Complete the following tasks using Git. Document each step with a screenshot in 
 ### Scenario 1: Conflict Resolution
 **Task:** Imagine you and your teammate are working on the same file, `project.txt`. Both of you make changes to the same lines and commit them. Let’s say your teammate’s changes are merged first. And now when you try to merge your changes, a merge conflict occurs.
 
-**Expected result:** 
+**Commands Used:** 
 ```
 mkdir "TASK - 1"
 git branch user1
 git branch user2
 cd "TASK-1"
-
+```
+```
 //My changes as user1
 touch project.txt
 git checkout user1
 echo "This is the content by user 1" > project.txt
 git add . && commit -m "Created project.txt and added some content to it."
-
+```
+```
 //My FRIEND's changes as user2
 
 touch project.txt
 git checkout user2
 echo "This is the content by user 2" > project.txt
 git add . && commit -m "Created project.txt and added some content to it."
-
+```
+```
 git checkout master
 
 //Merging my branch to main
@@ -45,11 +48,11 @@ git merge user2
 
 ***Apparently, To solve the issue occured here, we need to review the user2 changes. If nothing collides with user1 changes, we have to mark this as resolved by staging and committing the changes.***
 
-```
-git add .
-git commit -m "accepted the merge changes from user 2"
+   ```
+   git add .
+   git commit -m "accepted the merge changes from user 2"
 
-```
+   ```
 ***And therefore the file's content now is :***
 
 ![](/TASK%20-%201/project.txt%20snapshot.png)
@@ -72,14 +75,14 @@ I took the following steps:
 1. Created 3 python code files.
 2. Created Python files for Addition, Subtraction and Multiplication of 2 numbers.
 3. Adding the Files for tracking
-```
-git commit "Added python files for TASK - 2"
-```
+   ```
+   git commit "Added python files for TASK - 2"
+   ```
 4. Further modifying multiple files to implement the code logic.
 5. Added for staging and Committed the changes using a single command :
-```
-git commit -am "Modified Python files for Addition, Subtraction and Multiplication"
-```
+   ```
+   git commit -am "Modified Python files for Addition, Subtraction and Multiplication"
+   ```
 ![](/TASK%20-%202/Files.png)
 
 ### Scenario 3: Include Additional Commit in the Previous Commit Message
@@ -90,17 +93,17 @@ git commit -am "Modified Python files for Addition, Subtraction and Multiplicati
 2. Programmed the Python file according to instructions.
 3. Added to tracking and Staging.
 4. Committed the changes.
-   ```
-   git commit -am "Added Instructions and Python program file for fibonacci series"
-   ```
+      ```
+      git commit -am "Added Instructions and Python program file for fibonacci series"
+      ```
 ![](/TASK%20-%203/Initial%20commit.png)
 
 5. Typo error discovered at line 1 of Instruction file, resolved it
 6. Amended to existing commit
-```
-git add Instructions.txt
-git commit --amend
-```
+   ```
+   git add Instructions.txt
+   git commit --amend
+   ```
 ![](/TASK%20-%203/Final%20Commit.png)
 
 ### Scenario 4: Stash Command
@@ -108,28 +111,28 @@ git commit --amend
 
 **Steps:**
 1. checking if working tree is clean
-```
-git status
-```
+   ```
+   git status
+   ```
 2. Creating a blank python program file for random number generation and also adding it for tracking and committing the changes.
-```
-touch random_num.py
-git commit -am "added the python program file for random numbers."
-```
+   ```
+   touch random_num.py
+   git commit -am "added the python program file for random numbers."
+   ```
 3. Checking if working tree is clean or not, using `git status`
 4. adding the actual code to file, i.e. modifying the current file. Therefore the changes are not staged and committed. In this case I want to work on a different file and don't want my incomplete changes to be committed, therefore, I'll use a stash to store my current changes.
-```
-git stash
-// checking if the working tree asks to stage or commit
-git status
-```
+   ```
+   git stash
+   // checking if the working tree asks to stage or commit
+   git status
+   ```
 ![](/TASK%20-%204/git%20stash.png)
 
 5. Once i'm done working with the higher priority tasks, its time to complete the stashed task followed by staging and committing it. For that first I need to retrieve my stored changes in stash.
-```
-git stash pop
-//this removes the topmost change stored in stash stack.
-```
+   ```
+   git stash pop
+   //this removes the topmost change stored in stash stack.
+   ```
 ![](/TASK%20-%204/git%20stash%20pop.png)
 
 6. Experimentation with `git stash list` and `git stash drop`
@@ -141,10 +144,37 @@ git stash pop
 **Task:** You have files in your project that should not be tracked by Git, such as log files or build artifacts.
 
 **Steps:**
-1. Create a new repository with files that should and should not be tracked (`tracked_file.txt`, `ignored_file.log`).
-2. Create a `.gitignore` file and add patterns to exclude the appropriate files.
-3. Verify that the ignored files are not tracked by Git.
-4. Explain real-life use cases of `.gitignore`. What type of files are included in it?
+1. Created `tracked_file.txt`, `ignored_file.log` and .gitignore.
+   ```
+   touch tracked_file.txt ignored_file.log .gitignore
+   ``` 
+2. Adding `tracked_file.txt` & `.gitignore` for tracking, EXCEPT `ignored_file.log`, resulting to a warning of untracked file.
+   ```
+   git add tracked_file.txt .gitignore
+   ```
+   ![](/TASK%20-%205/not%20ignoring.png)
+3. Adding `ignored_file.log` to .gitignore for it to be ignored for tracking. Also adding .gitignore for staging.
+   ```
+   echo "ignored_file.log" >> .gitignore 
+   git add .gitignore
+   ```
+4. Verifying if `ignored_file.log` is ignored for tracking or not.
+   ![](/TASK%20-%205/ignoring.png)
+   *Hence, it is no longer being tracked*
+
+``Explain real-life use cases of a ".gitignore". What type of files are included in it?``
+```
+A .gitignore file prevents unnecessary or sensitive files from being tracked in a Git repository. Typical files include:
+
+Sensitive configuration: .env
+System-specific files: .DS_Store, Thumbs.db
+Build artifacts: dist/, *.class, *.o
+Dependencies: node_modules/, vendor/
+Logs: *.log
+Temporary files: *.tmp, *.swp
+IDE config: .vscode/, .idea/, *.iml
+Runtime data: *.pid, coverage/
+```
 
 ### Scenario 6: Revert to Previous Commits
 **Task:** You made a mistake in a recent commit and need to revert the changes.
