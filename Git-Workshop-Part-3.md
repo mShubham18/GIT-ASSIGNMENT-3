@@ -133,11 +133,9 @@ git stash pop
 ![](/TASK%20-%204/git%20stash%20pop.png)
 
 6. Experimentation with `git stash list` and `git stash drop`
+![](/TASK%20-%204/git%20stash%20list.png)
 
-
-**References:**
-- [Git Stash Documentation](https://git-scm.com/docs/git-stash)
-- [Working with Git Stash - Medium](https://medium.com/@artisingh656/working-with-git-stash-bb363b006e)
+![](/TASK%20-%204/git%20stash%20drop.png)
 
 ### Scenario 5: Use of .gitignore
 **Task:** You have files in your project that should not be tracked by Git, such as log files or build artifacts.
