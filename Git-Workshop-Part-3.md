@@ -229,7 +229,21 @@ Runtime data: *.pid, coverage/
    ```
    git push origin master
    ```
-4. Creating a `feature` branch and creating `factorial.py` 
+4. Creating a `feature` branch and creating `factorial.py` with its code
+
+   ```
+   git branch feature
+   touch factorial.py
+   git add .
+   git commit -m "Added Factorial.py for factorial program"
+   ```
+5. Pushing the feature branch into remote resulting to a PR.
+   ```
+   git push origin feature
+   ```
+*Visiting the Remote repository to verify PR*
+![]()
+
 By completing these tasks, you'll gain hands-on experience with essential Git commands and concepts.
 
 ## Questions:
