@@ -237,12 +237,35 @@ Runtime data: *.pid, coverage/
    git add .
    git commit -m "Added Factorial.py for factorial program"
    ```
-5. Pushing the feature branch into remote resulting to a PR.
+5. Pushing the feature branch into remote repository.
    ```
    git push origin feature
    ```
-*Visiting the Remote repository to verify PR*
-![]()
+*Visiting the Remote repository to verify notification*
+
+*Recieved Push notification*
+
+![](/TASK%20-%207/push%20notification.png)
+
+*Describing the changes done*
+
+![](/TASK%20-%207/changes%20description.png)
+
+*Creating a Pull Request (PR)*
+
+![](/TASK%20-%207/Creating%20PR.png)
+
+*Confirming merge*
+
+![](/TASK%20-%207/Confirming%20merge.png)
+
+*Proceeding with merging*
+
+![](/TASK%20-%207/confirmed%20merge.png)
+
+*Validating Merging of changes*
+
+![](/TASK%20-%207/Verifying%20merge.png)
 
 By completing these tasks, you'll gain hands-on experience with essential Git commands and concepts.
 
