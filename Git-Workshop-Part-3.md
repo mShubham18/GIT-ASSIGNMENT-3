@@ -107,11 +107,33 @@ git commit --amend
 **Task:** You are working on a feature but need to quickly switch to another task without committing your current changes.
 
 **Steps:**
-1. Make changes to a file but do not commit them.
-2. Stash the changes.
-3. Verify that your working directory is clean.
-4. Apply the stashed changes back.
-5. Experiment with other stash commands like `stash list`, `stash pop`, and `stash drop`.
+1. checking if working tree is clean
+```
+git status
+```
+2. Creating a blank python program file for random number generation and also adding it for tracking and committing the changes.
+```
+touch random_num.py
+git commit -am "added the python program file for random numbers."
+```
+3. Checking if working tree is clean or not, using `git status`
+4. adding the actual code to file, i.e. modifying the current file. Therefore the changes are not staged and committed. In this case I want to work on a different file and don't want my incomplete changes to be committed, therefore, I'll use a stash to store my current changes.
+```
+git stash
+// checking if the working tree asks to stage or commit
+git status
+```
+![](/TASK%20-%204/git%20stash.png)
+
+5. Once i'm done working with the higher priority tasks, its time to complete the stashed task followed by staging and committing it. For that first I need to retrieve my stored changes in stash.
+```
+git stash pop
+//this removes the topmost change stored in stash stack.
+```
+![](/TASK%20-%204/git%20stash%20pop.png)
+
+6. Experimentation with `git stash list` and `git stash drop`
+
 
 **References:**
 - [Git Stash Documentation](https://git-scm.com/docs/git-stash)
