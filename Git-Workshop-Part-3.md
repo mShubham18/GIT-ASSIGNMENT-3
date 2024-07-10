@@ -180,10 +180,33 @@ Runtime data: *.pid, coverage/
 **Task:** You made a mistake in a recent commit and need to revert the changes.
 
 **Steps:**
-1. Create a file and commit changes to the file.
-2. Make another commit with a mistake.
-3. Revert to the previous commit, undoing the mistake.
-4. Verify the state of the repository to ensure the revert was successful.
+1. Created `pyramid.py`, added code to it.
+   ```
+   touch pyramid.py
+   ```
+2. Added `pyramid.py` to tracking and committed the changes.
+   ```
+   git add .
+   git commit -m "Created pyramid.py and added working code in it."
+   ```
+   ![](/TASK%20-%206/1st%20commit.png)
+3. Made some other changes and committed the new changes.
+   ```
+   git commit -am "Update the initial code for pyramid.py"
+   ```
+   *Realised a mistake in the code, making it unable to execute*
+   
+   ![](/TASK%20-%206/mistake%20commit.png)
+
+4. Reverting the most recent commit.
+   ```
+   //checking the commit's ID
+   git log
+
+   git revert 987f56395977f1eddfb807f728d45eccfcb8c799
+   ```
+   *Checking if the revert was successful i.e. code is complete or not in pyramid.py*
+   ![](/TASK%20-%206/reverted%20commit.png)
 
 ### Scenario 7: Create a Pull Request
 **Task:** You have made changes on a feature branch and want to merge them into the main branch via a pull request.
